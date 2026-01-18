@@ -16,6 +16,7 @@ class Path
         return dirname(__DIR__, 2);
     }
 
+    
     /**
      * الحصول على مسار مجلد الإعدادات (config)
      * @param string $file اسم الملف المطلوب (اختياري)
@@ -23,6 +24,7 @@ class Path
      */
     public static function config(string $file = ''): string
     {
+           
         return self::root() . '/config' . ($file ? '/' . $file : '');
     }
 

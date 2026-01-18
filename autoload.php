@@ -3,7 +3,6 @@
 /**
  * نظام التحميل التلقائي للكلاسات
  */
-
 spl_autoload_register(function ($className) {
     // تحويل namespace إلى مسار ملف
     $className = str_replace('\\', DIRECTORY_SEPARATOR, $className);

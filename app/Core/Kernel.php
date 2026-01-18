@@ -16,10 +16,14 @@ class Kernel
     {
         // إعداد رؤوس CORS (Cross-Origin Resource Sharing)
         // تسمح للمواقع الأخرى بالوصول إلى الـ API الخاص بنا
-        header('Access-Control-Allow-Origin: *'); // السماح لجميع النطاقات (*) أو يمكن تحديد نطاقات معينة
-        header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS'); // الطرق المسموح بها
-        header('Access-Control-Allow-Headers: Content-Type, Authorization'); // الرؤوس المسموح بها
-        header('Access-Control-Allow-Credentials: true'); // السماح بإرسال بيانات الاعتماد (كوكيز)
+        // السماح لجميع النطاقات (*) أو يمكن تحديد نطاقات معينة
+        header('Access-Control-Allow-Origin: *'); 
+        // الطرق المسموح بها
+        header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+        // الرؤوس المسموح بها
+        header('Access-Control-Allow-Headers: Content-Type, Authorization');
+        // السماح بإرسال بيانات الاعتماد (كوكيز)
+        header('Access-Control-Allow-Credentials: true'); 
 
         // معالجة طلبات Preflight (طلبات OPTIONS المسبقة)
         // عندما يرسل المتصفح طلب OPTIONS للتحقق من صلاحية الطلب قبل الإرسال الفعلي
