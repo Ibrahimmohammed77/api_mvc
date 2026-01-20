@@ -26,31 +26,31 @@
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="/dashboard">
+                    <a href="<?php echo \App\Core\Path::url(''); ?>">
                         <i class="fas fa-tachometer-alt"></i>
                         الرئيسية
                     </a>
                 </li>
                 <li>
-                    <a href="/dashboard/profile" class="active">
+                    <a href="<?php echo \App\Core\Path::url('dashboard/profile'); ?> class="active">
                         <i class="fas fa-user"></i>
                         الملف الشخصي
                     </a>
                 </li>
                 <li>
-                    <a href="/dashboard/stats">
+                    <a href="<?php echo \App\Core\Path::url('dashboard/stats');?>" >
                         <i class="fas fa-chart-bar"></i>
                         الإحصائيات
                     </a>
                 </li>
                 <li>
-                    <a href="/dashboard/settings">
+                    <a href="<?php echo \App\Core\Path::url('dashboard/settings');?>">
                         <i class="fas fa-cog"></i>
                         الإعدادات
                     </a>
                 </li>
                 <li>
-                    <a href="/logout">
+                    <a href="<?php echo \App\Core\Path::url('logout');?>">
                         <i class="fas fa-sign-out-alt"></i>
                         تسجيل الخروج
                     </a>
