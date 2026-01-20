@@ -24,7 +24,7 @@ class Router
      */
     public function post(string $uri, string $controller): void
     {
-        $this->routes['POST']["api/login"] ="AuthApiController@login";
+        $this->routes['POST'][$uri] = $controller;
     }
 
     /**
