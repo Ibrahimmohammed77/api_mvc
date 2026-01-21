@@ -30,7 +30,7 @@ class Config
         self::$items['database'] = require Path::config('database.php');
         
         // يمكن إضافة ملفات إعدادات أخرى هنا عند الحاجة
-        // مثال: self::$items['email'] = require Path::config('email.php');
+        //  self::$items['email'] = require Path::config('email.php');
     }
 
 
@@ -43,18 +43,15 @@ class Config
      */
     public static function get(string $key, $default = null)
     {
-        // تقسيم المفتاح إلى أجزاء باستخدام النقطة
-        // مثال: 'app.name' تصبح ['app', 'name']
+        
         $keys = explode('.', $key);
-        $value = self::$items; // البدء من مصفوفة الإعدادات الرئيسية
-
-        // البحث في المصفوفة متعددة الأبعاد
+        $value = self::$items;
         foreach ($keys as $segment) {
-            // إذا لم يكن المفتاح موجوداً، نرجع القيمة الافتراضية
+            
             if (!isset($value[$segment])) {
                 return $default;
             }
-            // الانتقال إلى المستوى التالي
+           
             $value = $value[$segment];
         }
 

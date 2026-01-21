@@ -164,6 +164,7 @@ class User
         $stmt = $this->db->prepare($sql);
         return $stmt->execute($data);
     }
+   
 
     /**
      * الحصول على جميع المستخدمين
